@@ -3,8 +3,13 @@ const Datastore = require('nedb')
 const fetch = require('node-fetch')
 require('dotenv').config()
 
+// export const thunderforest_api_key = process.env.THUNDERFOREST_API_KEY
+
 const app = express()
-app.listen(3000, () => console.log('Starting server: http://localhost:3000'))
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+  console.log(`Starting server at ${port}`)
+})
 app.use(express.static('public'))
 app.use(express.json({ limit: '1mb' }))
 

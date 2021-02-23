@@ -1,18 +1,23 @@
+// require('dotenv').config()
+// const thunderforest_api_key = require('../../index')
+// bovenstaande werkt niet; hoe zou het moeten???
+
 const mymap = L.map('checkinMap').setView([0, 0], 2)
-// const attribution =
-//   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-auteurs'
-// const tileUrl = 'https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png'
-// const tiles = L.tileLayer(tileUrl, { attribution })
-// tiles.addTo(mymap)
-const mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>-auteurs'
-const ocmlink = '<a href="http://thunderforest.com/">Thunderforest</a>'
-L.tileLayer(
-  'https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=d8619099c2d441a0ba8b1130540f5c2c',
-  {
-    attribution: `&copy; ${mapLink} & ${ocmlink}`,
-    maxZoom: 18,
-  }
-).addTo(mymap)
+const attribution =
+  '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-auteurs'
+const tileUrl = 'https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png'
+const tiles = L.tileLayer(tileUrl, { attribution })
+tiles.addTo(mymap)
+// const mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>-auteurs'
+// const ocmlink = '<a href="http://thunderforest.com/">Thunderforest</a>'
+// // const api_key = process.env.THUNDERFOREST_API_KEY
+// L.tileLayer(
+//   `https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=${thunderforest_api_key}`,
+//   {
+//     attribution: `&copy; ${mapLink} & ${ocmlink}`,
+//     maxZoom: 18,
+//   }
+// ).addTo(mymap)
 
 const getData = async () => {
   const response = await fetch('/api')
