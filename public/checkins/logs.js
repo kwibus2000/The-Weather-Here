@@ -19,7 +19,9 @@ tiles.addTo(mymap)
 //   }
 // ).addTo(mymap)
 
-const getData = async () => {
+getData()
+
+async function getData() {
   const response = await fetch('/api')
   const data = await response.json()
   console.log('air:', data.air)
@@ -39,5 +41,3 @@ const getData = async () => {
   }
   console.log(data)
 }
-
-getData()
