@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>The Weather Here</title>
+  </head>
+  <body>
+    <h1>The Weather Here</h1>
+    <div><a href="/">voeg toe</a> | <a href="/checkins">kaart</a></div>
+    <p>
+      Het weer hier (<span id="latitude"></span>&deg;,
+      <span id="longitude"></span>&deg;) is <span id="summary"></span> bij een
+      temperatuur van <span id="temp"></span> &deg; C.<br /><br />
+      <span id="air">
+        De concentratie van kleine deeltjes (<span id="aq_parameter"></span>)
+        is<span id="aq_value"></span> <span id="aq_units"></span>,
+        <span id="aq_city"></span>, <span id="aq_location"></span> laatst
+        gemeten op <span id="aq_date"></span>.
+      </span>
+    </p>
+    <script src="sketch.js"></script>
+  </body>
+</html>
+
+<!-- dit is de 'root' HTML, in de subdirectory 'public' -->

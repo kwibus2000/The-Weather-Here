@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <style>
+      #checkinMap {
+        height: 480px;
+        margin: 8px 0;
+      }
+    </style>
+    <link rel="stylesheet" href="../style.css" />
+    <title>The Weather Here</title>
+  </head>
+  <body>
+    <h1>The Weather Here</h1>
+    <div><a href="/">voeg toe</a> | <a href="/checkins">kaart</a></div>
+    <div id="checkinMap"></div>
+    <script src="logs.js"></script>
+  </body>
+</html>
+
+<!-- 'checkins', waar de kaart / gegevens getoond worden -->
